@@ -142,6 +142,7 @@ if health:
     report_generate(cpu,p,disk,ram)
 else:
     print("-SYSTEM IS IN HEALTHY STATE-\n")
+#In any case display resource usage
 print("C.P.U. Usage->",cpu)
 for p,disk in disks:
     print("Disk Usage","for",p,"->",disk)
