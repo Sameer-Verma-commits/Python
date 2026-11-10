@@ -1,0 +1,14 @@
+import numpy as np
+import pandas as pd
+
+df=pd.DataFrame({
+        'Name':['A', 'B', 'C', 'D', 'E','F'],
+        'Marks': [40, 60, 80, 90, 100,10]})
+
+print("Original Data:")
+print(df)
+        
+# Min-Max Normalization using NumPy
+df['Normalized_Marks'] =(df['Marks'] - np.min(df['Marks'])) /(np.max(df['Marks']) - np.min(df['Marks']))
+print("\nNormalize Data:")
+print(df)
