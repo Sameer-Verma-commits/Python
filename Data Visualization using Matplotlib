@@ -1,0 +1,59 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Sample dataset
+students = ['A', 'B', 'C', 'D', 'E']
+maths = np.array([75, 80, 65, 90, 85])
+science = np.array([70, 85, 60, 95, 80])
+english = np.array([80, 75, 70, 85, 90])
+
+# Box Plot
+plt.figure()
+plt.boxplot([maths, science, english],tick_labels=['Maths', 'Science', 'English'])
+plt.title("Box Plot of Student Marks")
+plt.ylabel("Marks")
+plt.show()
+
+# Histogram
+plt.figure()
+plt.hist(maths, bins=5, color='skyblue', edgecolor='black')
+plt.title("Histogram of Maths Marks")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.show()
+
+# Heat Map
+data = np.array([maths, science, english])
+
+plt.figure()
+plt.imshow(data, cmap='coolwarm', aspect='auto')
+plt.colorbar(label='Marks')
+plt.xticks(range(5), students)
+plt.yticks(range(3), ['Maths', 'Science', 'English'])
+plt.title("Heat Map of Student Marks")
+plt.show()
+
+# Bar Chart
+plt.figure()
+plt.bar(students, maths, color='green')
+plt.title("Bar Chart of Maths Marks")
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.show()
+
+# Line Chart
+plt.figure()
+plt.plot(students, science, marker='o', color='red')
+plt.title("Line Chart of Science Marks")
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.show()
+
+# Pie Chart
+plt.figure()
+plt.pie([np.mean(maths), np.mean(science),
+         np.mean(english)],
+        labels=['Maths', 'Science', 'English'],
+        autopct='%1.1f%%')
+plt.title("Average Marks Distribution")
+plt.show()
