@@ -1,0 +1,22 @@
+import pandas as pd
+
+# Create a dataset
+data = {
+    'Name': ['Amit', 'Rahul', None, 'Priya', 'Neha'],
+    'Age': [20, None, 22, 21, None],
+    'Marks': [85, 90, None, 75, 88]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+print("Original DataFrame:")
+print(df)
+
+# Count missing values in each column
+print("\nMissing Values in Each Column:")
+print(df.isnull().sum())
+
+# Count total missing values
+print("\nTotal Missing Values:")
+print(df.isnull().sum().sum())
