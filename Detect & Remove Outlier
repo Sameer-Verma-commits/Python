@@ -25,6 +25,7 @@ print(df[outliers.any(axis=1)])
 
 # Remove rows containing outliers
 df_cleaned = df[~outliers.any(axis=1)]
+
 # Display cleaned dataset
 print("\nDataset after removing outliers:")
 print(df_cleaned)
