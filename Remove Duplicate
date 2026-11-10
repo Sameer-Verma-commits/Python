@@ -1,0 +1,20 @@
+import pandas as pd
+
+# Create a dataset
+data = {
+    'Name': ['Sameer', 'Om', 'Sameer', 'Ahmad', 'Om', 'Aman'],
+    'Age': [20, 21, 22, 23, 24, 25],
+    'Marks': [85, 90, 80, 75, 88, 92]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+print("Original DataFrame:")
+print(df)
+
+# Remove duplicate values based on the first column
+df = df.drop_duplicates(subset=df.columns[0])
+
+print("\nDataFrame after removing duplicates:")
+print(df)
