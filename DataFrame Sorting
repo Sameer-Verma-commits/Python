@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Create DataFrame
+df = pd.DataFrame({
+    'Name': ['Sameer Verma', 'Om Rai', 'Ahmad Kazmi', 'Ved Prakash'],
+    'Age': [25, 30, 20, 28],
+    'Salary': [50000, 70000, 40000, 60000]})
+
+print("Original DataFrame:")
+print(df)
+
+# Sort DataFrame based on the first column
+df = df.sort_values(by=df.columns[0])
+
+print("\nSorted DataFrame:")
+print(df)
