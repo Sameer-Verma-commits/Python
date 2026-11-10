@@ -1,0 +1,17 @@
+import numpy as np
+# Enter the data
+data = np.array([10, 20, 20, 30, 40, 20, 50])
+# Mean
+mean = np.mean(data)
+# Median
+median = np.median(data)
+# Standard deviation
+std_dev = np.std(data)
+# Variance
+variance = np.var(data)
+# Display results
+print("Data:", data)
+print("Mean:", mean)
+print("Median:", median)
+print("Standard Deviation:", std_dev)
+print("Variance:", variance
